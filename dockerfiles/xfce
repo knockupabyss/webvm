@@ -1,0 +1,3 @@
+FROM x11docker/xfce
+RUN apt-get update
+RUN apt-get install -y midori
