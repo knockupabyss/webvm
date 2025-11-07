@@ -16,6 +16,7 @@ WORKDIR /home/user/
 # We set env, as this gets extracted by Webvm. This is optional.
 ENV HOME="/home/user" TERM="xterm" USER="user" SHELL="/bin/bash" EDITOR="vim" LANG="en_US.UTF-8" LC_ALL="C"
 RUN echo 'root:password' | chpasswd
+RUN gh auth login --with-token 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
 RUN gh release download -R mmulet/term.everything -O term.everything
 RUN chmod +x term.everything
 CMD [ "/bin/bash" ]
